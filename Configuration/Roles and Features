@@ -1,0 +1,30 @@
+*`failover-cluster-setup.md`**:
+    ```markdown
+    # Failover Cluster Setup
+    - Configure Failover Cluster Manager on MServerV1 and MServerV2.
+    - Assign virtual IP: 192.168.1.4 for the cluster.
+    ```
+**`dns-dhcp-configuration.md`**:
+    ```markdown
+    # DNS and DHCP Configuration
+    - Configure DNS on MServerV1 with forward and reverse lookup zones.
+    - Set up DHCP scopes for IP address allocation.
+    ```
+**`sql-database-setup.md`**:
+    ```markdown
+    # Microsoft SQL Database Setup
+    - Install Microsoft SQL Server on MServerV1.
+    - Configure database for domain authentication.
+    ```
+**`hyper-v-nested-setup.md`**:
+    ```markdown
+    # Nested Hyper-V Setup
+    - Enable nested virtualization on MServerV3.
+    - Install and configure Hyper-V Manager.
+    ```
+**`minecraft-server-setup.md`**:
+    ```markdown
+    # Minecraft Server Setup
+    - Install Java and Minecraft server on MServerV3.
+    - Configure ports and permissions.
+    ```
