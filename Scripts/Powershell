@@ -1,0 +1,17 @@
+**`create-user.ps1`**:
+    ```powershell
+    # Create a user with full admin privileges
+    New-ADUser -Name "AdminUser" -AccountPassword (ConvertTo-SecureString "Password123!" -AsPlainText -Force) -Enabled $true
+    Add-ADGroupMember -Identity "Domain Admins" -Members "AdminUser"
+    ```
+**`enable-remote-access.ps1`**:
+    ```powershell
+    # Enable Remote Desktop
+    Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+    Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+    ```
+**`setup-file-share.ps1`**:
+    ```powershell
+    # Set up file sharing
+    New-SmbShare -Name "SharedFolder" -Path "C:\SharedFolder" -FullAccess "Everyone"
+    ```
